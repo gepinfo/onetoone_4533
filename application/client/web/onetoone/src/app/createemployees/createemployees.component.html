@@ -1,0 +1,28 @@
+<h2 class="screen-align">Createemployees</h2>
+<label id="template-i7ad" class="label ">
+    <div id="template-imjl" class="">Employee name:</div>
+</label>
+<input id="template-iivp" placeholder="Enter employee name" required="true"
+[(ngModel)]="employeesentity.name" [ngModelOptions]="{standalone: true}"
+class="input form-control " />
+<label id="template-i1qk" class="label ">
+    <div id="template-iue7" class="">Designation:</div>
+</label>
+<input id="template-i57b" placeholder="Enter employee designation" required="true"
+[(ngModel)]="employeesentity.designation" [ngModelOptions]="{standalone: true}"
+class="input form-control " />
+<label id="template-i922" class="label ">
+    <div id="template-idnf" class="">Employee ID:</div>
+</label>
+<input id="template-i6kd" placeholder="Enter Employee ID" required="true"
+[(ngModel)]="employeesentity.employeeid" [ngModelOptions]="{standalone: true}"
+class="input form-control " />
+<label id="template-iufgp" class="label ">
+    <div id="template-i9el5" class="">Car ID:</div>
+</label>
+<input id="template-iix8z" placeholder="Enter car ID" required="true"
+[(ngModel)]="employeesentity.carid" [ngModelOptions]="{standalone: true}"
+class="input form-control " />
+<button id="template-ioy2d" (click)="GpCreate()" class="button btn btn-primary ">
+    <div id="template-izloe" class="">Create</div>
+</button>

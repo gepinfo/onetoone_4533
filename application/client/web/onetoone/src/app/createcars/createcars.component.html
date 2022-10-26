@@ -1,0 +1,21 @@
+<h2 class="screen-align">Createcars</h2>
+<label id="template-i0ac" class="label ">
+    <div id="template-ipi4" class="">Car name:</div>
+</label>
+<input id="template-iyjh" placeholder="Enter car name" required="true"
+[(ngModel)]="carsentity.name" [ngModelOptions]="{standalone: true}" class="input form-control "
+/>
+<label id="template-iapl" class="label ">
+    <div id="template-ihnt" class="">Car model:</div>
+</label>
+<input id="template-iupl" placeholder="Enter car model" required="true"
+[(ngModel)]="carsentity.model" [ngModelOptions]="{standalone: true}" class="input form-control "
+/>
+<label id="template-i1m4" class="label ">
+    <div id="template-izpf" class="">Car ID:</div>
+</label>
+<input id="template-iq6x" placeholder="Enter car ID" required="true" [(ngModel)]="carsentity.carid"
+[ngModelOptions]="{standalone: true}" class="input form-control " />
+<button id="template-ivguj" (click)="GpCreate()" class="button btn btn-primary ">
+    <div id="template-ic0rg" class="">Create</div>
+</button>
