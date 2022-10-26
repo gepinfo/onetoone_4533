@@ -15,7 +15,7 @@ export class employeesentityController implements Controller {
     private initializeRoutes() {
         this.router.get('/employeesentity', this.GpGetAllValues);
 this.router.post('/employeesentity', this.GpCreate);
-        //#@gepdelimeterone@#
+        this.router.get('/employeesentity/get/searchrelationship', this.GpSearchRelationship);
     }
 
 public GpGetAllValues(req: Request, res: Response) {
@@ -41,7 +41,7 @@ public GpCreate(req: Request, res: Response) {
         });
     }
 
-    //#@gepdelimeter@#
+    undefined
 
 
 
