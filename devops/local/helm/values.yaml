@@ -54,20 +54,20 @@ service:
   systementry: 
     name: systementry
     type: NodePort
-    port: 8022
-    targetPort: 8022
+    port: 8025
+    targetPort: 8025
 
   cars: 
     name: cars
     type: NodePort
-    port: 8023
-    targetPort: 8023
+    port: 8026
+    targetPort: 8026
 
   employees: 
     name: employees
     type: NodePort
-    port: 8024
-    targetPort: 8024
+    port: 8027
+    targetPort: 8027
 
 
 deployment:
