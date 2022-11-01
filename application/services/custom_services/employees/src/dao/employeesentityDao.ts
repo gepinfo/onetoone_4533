@@ -7,42 +7,7 @@ export class employeesentityDao {
     private employeesentity = employeesentityModel;
     constructor() { }
     
-    public async GpSearch(employeesentityData, callback){
-    
-    new CustomLogger().showLogger('info', 'Enter into employeesentityDao.ts: GpSearch');
-
-    let andkey ;let and_obj = {} ;let orkey ;let or_obj = {} ;;
-
-    
-    
-    Object.entries(employeesentityData).forEach(
-                            ([key,value]) => {
-                                if(value !== ''){
-                                    andkey = key;
-                                    and_obj[andkey] = value;
-                                }
-                                else{
-                                    orkey = key;
-                                    or_obj[orkey] = { $ne: '' }
-                                }
-                            }
-                        );;
-    this.employeesentity.find({$and: [
-                            {
-                                $or: [
-                                   or_obj
-                                ]
-                            },
-                            and_obj
-                        ]}).then((result)	=>	{
-
-        new CustomLogger().showLogger('info', 'Exit from employeesentityDao.ts: GpSearch');
-
-        callback(result);
-}).catch((error)=>{
-callback(error);
-});}
-public async GpGetAllValues(callback){
+    public async GpGetAllValues(callback){
     
     new CustomLogger().showLogger('info', 'Enter into employeesentityDao.ts: GpGetAllValues');
 

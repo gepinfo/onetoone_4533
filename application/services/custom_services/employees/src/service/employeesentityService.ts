@@ -8,16 +8,7 @@ export class employeesentityService {
     
     constructor() { }
     
-    public  GpSearch(req: Request, callback){
-    new CustomLogger().showLogger('info', 'Enter into employeesentityService.ts: GpSearch')
-     let  employeesentityData = req.query;
-     employeesentity.GpSearch(employeesentityData,(response)=>{
-             new CustomLogger().showLogger('info', 'Exit from employeesentityService.ts: GpSearch')
-         callback(response);
-         });
-    }
-    
-public  GpGetAllValues(req: Request, callback){
+    public  GpGetAllValues(req: Request, callback){
     new CustomLogger().showLogger('info', 'Enter into employeesentityService.ts: GpGetAllValues')
      
      employeesentity.GpGetAllValues((response)=>{
