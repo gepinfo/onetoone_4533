@@ -7,7 +7,14 @@ export class employeesentityController {
     
     constructor() { }
     
-    public GpGetAllValues(req: Request, res: Response) {
+    public GpSearch(req: Request, res: Response) {
+employeesentity.GpSearch(req, (response) => {
+                new CustomLogger().showLogger('info', 'Enter into employeesentityController.ts: GpSearch');
+     res.status(200);
+     res.json(response);
+                new CustomLogger().showLogger('info', 'Exit from employeesentityController.ts: GpSearch');
+    })}
+public GpGetAllValues(req: Request, res: Response) {
 employeesentity.GpGetAllValues(req, (response) => {
                 new CustomLogger().showLogger('info', 'Enter into employeesentityController.ts: GpGetAllValues');
      res.status(200);

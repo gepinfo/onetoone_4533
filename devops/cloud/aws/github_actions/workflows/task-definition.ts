@@ -70,9 +70,9 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/onetoone_4533?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"},{"name":"SYSTEMCREDENTIALMANAGERURL","value":"http://127.0.0.1:8005"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8034"}
-            ,{"name":"CARSURL","value":"http://onetoone0.local:8035"}
-            ,{"name":"EMPLOYEESURL","value":"http://onetoone0.local:8036"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8040"}
+            ,{"name":"CARSURL","value":"http://onetoone0.local:8041"}
+            ,{"name":"EMPLOYEESURL","value":"http://onetoone0.local:8042"}
             ],
             "secrets": null,
             "mountPoints": [
@@ -294,7 +294,7 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/onetoone_4533?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8034"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8040"}
             ],
             "mountPoints": [
                 {
@@ -375,9 +375,9 @@ module.exports = {
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "8034",
+                    "containerPort": "8040",
                     "protocol": "tcp",
-                    "hostPort": "8034"
+                    "hostPort": "8040"
                 }
             ],
             "environmentFiles": null,

@@ -204,7 +204,7 @@ services:
     image: systementry-4533
     container_name: systementry-4533
     ports: 
-      - 8034:8034
+      - 8040:8040
     env_file: .env
     depends_on:
       - mongo
@@ -220,7 +220,7 @@ services:
     image: cars-4533
     container_name: cars-4533
     ports: 
-      - 8035:8035
+      - 8041:8041
     env_file: .env
     depends_on:
       - mongo
@@ -236,7 +236,7 @@ services:
     image: employees-4533
     container_name: employees-4533
     ports: 
-      - 8036:8036
+      - 8042:8042
     env_file: .env
     depends_on:
       - mongo
