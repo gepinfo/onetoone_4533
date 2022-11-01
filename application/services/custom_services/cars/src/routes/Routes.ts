@@ -11,7 +11,8 @@ export class Routes {
                 status: 'up'
             })
         })
-        app.route('/carsentity').post(this.carsentity.GpCreate);
+        app.route('/carsentity/get/search').get(this.carsentity.GpSearch);
+app.route('/carsentity').post(this.carsentity.GpCreate);
      }
 
 }

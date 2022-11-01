@@ -13,10 +13,22 @@ export class carsentityController implements Controller {
     }
 
     private initializeRoutes() {
-        this.router.post('/carsentity', this.GpCreate);
+        this.router.get('/carsentity/get/search', this.GpSearch);
+this.router.post('/carsentity', this.GpCreate);
         //#@gepdelimeterone@#
     }
 
+public GpSearch(req: Request, res: Response) {
+            new CustomLogger().showLogger('info', 'Enter into carsentityController.ts: GpSearch');
+        new ApiAdapter().get(Constant.CARSURL + `${req.url}` )
+        .then((res: any) => res.response.json()).then(result => {
+              req.baseUrl === '/mobile' ? res.send(result) :
+              req.baseUrl === '/web' ? res.send(result) : res.send(null)
+            new CustomLogger().showLogger('info', 'Exit from carsentityController.ts: GpSearch');
+        }).catch(err => {
+            res.send(err);
+        });
+    }
 public GpCreate(req: Request, res: Response) {
             new CustomLogger().showLogger('info', 'Enter into carsentityController.ts: GpCreate');
         new ApiAdapter().post(Constant.CARSURL + `${req.url}` , req.body)

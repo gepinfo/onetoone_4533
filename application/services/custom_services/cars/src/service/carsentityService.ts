@@ -8,7 +8,16 @@ export class carsentityService {
     
     constructor() { }
     
-    public  GpCreate(req: Request, callback){
+    public  GpSearch(req: Request, callback){
+    new CustomLogger().showLogger('info', 'Enter into carsentityService.ts: GpSearch')
+     let  carsentityData = req.query;
+     carsentity.GpSearch(carsentityData,(response)=>{
+             new CustomLogger().showLogger('info', 'Exit from carsentityService.ts: GpSearch')
+         callback(response);
+         });
+    }
+    
+public  GpCreate(req: Request, callback){
     new CustomLogger().showLogger('info', 'Enter into carsentityService.ts: GpCreate')
      let  carsentityData = req.body;
      carsentity.GpCreate(carsentityData,(response)=>{
